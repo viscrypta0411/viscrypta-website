@@ -244,7 +244,7 @@ h3 { font-size: 1.28rem; }
 .status-dot { width: 8px; height: 8px; flex: none; background: var(--green); border-radius: 50%; box-shadow: 0 0 0 5px rgba(16,185,129,.15); }
 
 /* ── Portfolio Section ────────────────────────────────────── */
-.portfolio-section { padding-top: 60px; background: linear-gradient(180deg, #f2f7fa 0%, #fff 60%); }
+.portfolio-section { padding-top: 60px; scroll-margin-top: 90px; background: linear-gradient(180deg, #f2f7fa 0%, #fff 60%); }
 .portfolio-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; align-items: stretch; }
 .portfolio-card {
   min-width: 0; overflow: hidden; display: flex; flex-direction: column;
