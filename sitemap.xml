@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://viscrypta.com/</loc>
+    <loc>https://viscrypta0411.github.io/viscrypta-website/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://viscrypta.com/product.html</loc>
+    <loc>https://viscrypta0411.github.io/viscrypta-website/product.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://viscrypta.com/about.html</loc>
+    <loc>https://viscrypta0411.github.io/viscrypta-website/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://viscrypta.com/contact.html</loc>
+    <loc>https://viscrypta0411.github.io/viscrypta-website/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
