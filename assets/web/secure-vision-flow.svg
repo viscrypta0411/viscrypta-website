@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 440" fill="none" role="img" aria-labelledby="title description">
+  <title id="title">Secure Vision camera security flow</title>
+  <desc id="description">An original technical illustration showing a camera sensor sending video through the Secure Vision security chip before encrypted data continues to a network.</desc>
+  <defs>
+    <linearGradient id="chip" x1="256" y1="126" x2="454" y2="316" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1C3C59"/>
+      <stop offset="1" stop-color="#10243A"/>
+    </linearGradient>
+    <linearGradient id="lens" x1="66" y1="177" x2="177" y2="288" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#18364F"/>
+      <stop offset="1" stop-color="#0B1727"/>
+    </linearGradient>
+    <filter id="shadow" x="220" y="98" width="270" height="256" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feFlood flood-opacity="0" result="background"/>
+      <feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+      <feOffset dy="12"/>
+      <feGaussianBlur stdDeviation="14"/>
+      <feComposite in2="SourceAlpha" operator="out"/>
+      <feColorMatrix values="0 0 0 0 0.01 0 0 0 0 0.04 0 0 0 0 0.1 0 0 0 0.3 0"/>
+      <feBlend in2="background" result="shadow"/>
+      <feBlend in="SourceGraphic" in2="shadow" result="shape"/>
+    </filter>
+  </defs>
+  <g stroke="#2F799B" stroke-opacity=".58" stroke-width="2">
+    <path d="M26 102h114v34h54v44h62M26 338h104v-34h66v-38h60"/>
+    <path d="M420 180h76v-40h54v-38h104M420 270h72v42h60v38h102"/>
+  </g>
+  <g fill="#36C5F0">
+    <circle cx="194" cy="180" r="4"/><circle cx="196" cy="266" r="4"/>
+    <circle cx="550" cy="140" r="4"/><circle cx="552" cy="312" r="4"/>
+  </g>
+  <g transform="translate(38 151)">
+    <path d="M13 26 39 8h91c9 0 16 7 16 16v95c0 9-7 16-16 16H39l-26-18V26Z" fill="#12263B" stroke="#7EA3B8" stroke-width="2"/>
+    <path d="M18 30 43 16h84c5 0 9 4 9 9v84c0 5-4 9-9 9H43l-25-16V30Z" fill="#19364D"/>
+    <circle cx="78" cy="67" r="39" fill="url(#lens)" stroke="#36C5F0" stroke-width="2"/>
+    <circle cx="78" cy="67" r="25" fill="#071321" stroke="#6FAFC5" stroke-width="2"/>
+    <circle cx="78" cy="67" r="11" fill="#36C5F0" fill-opacity=".9"/>
+    <path d="M10 42H0v48h10M53 140v16h51v-16" stroke="#36C5F0" stroke-width="2"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="264" y="126" width="168" height="188" rx="14" fill="url(#chip)" stroke="#36C5F0" stroke-width="2"/>
+    <rect x="278" y="140" width="140" height="160" rx="8" stroke="#5B7892" stroke-opacity=".5"/>
+    <g stroke="#36C5F0" stroke-width="2" stroke-linecap="round">
+      <path d="M250 153h14M250 178h14M250 203h14M250 228h14M250 253h14M250 278h14"/>
+      <path d="M432 153h14M432 178h14M432 203h14M432 228h14M432 253h14M432 278h14"/>
+      <path d="M294 112v14M319 112v14M344 112v14M369 112v14M394 112v14"/>
+      <path d="M294 314v14M319 314v14M344 314v14M369 314v14M394 314v14"/>
+    </g>
+    <path d="M348 169c-15 0-27 12-27 27v7h54v-7c0-15-12-27-27-27Z" stroke="#36C5F0" stroke-width="4"/>
+    <rect x="311" y="199" width="74" height="57" rx="8" fill="#36C5F0" fill-opacity=".14" stroke="#36C5F0" stroke-width="2"/>
+    <path d="M348 216a9 9 0 0 0-5 16l-3 11h16l-3-11a9 9 0 0 0-5-16Z" fill="#D9F6FF"/>
+  </g>
+  <g transform="translate(560 173)">
+    <rect x="0" y="0" width="76" height="86" rx="12" fill="#10243A" stroke="#5A809A" stroke-width="2"/>
+    <path d="M18 27 28 19l10 8v12c0 10-7 17-10 19-3-2-10-9-10-19V27Z" fill="#36C5F0" fill-opacity=".18" stroke="#36C5F0" stroke-width="2"/>
+    <path d="m24 38 4 4 7-8" stroke="#BCEEFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M48 28h16M48 39h16M48 50h12" stroke="#8EAFC2" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>
