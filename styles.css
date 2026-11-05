@@ -290,6 +290,19 @@ h3 { font-size: 1.28rem; }
 .dark-section .eyebrow { color: var(--cyan); }
 .video-reveal { opacity: 0; transform: translateY(40px); transition: opacity .8s ease, transform .8s ease; }
 .video-reveal.is-visible { opacity: 1; transform: translateY(0); }
+.video-reveal {
+  min-height: calc(100vh - 75px);
+  min-height: calc(100svh - 75px);
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 760px) {
+  .video-reveal {
+    min-height: calc(100vh - 69px);
+    min-height: calc(100svh - 69px);
+  }
+}
 
 /* YouTube embed */
 .video-section-wrap { margin-top: 42px; }
