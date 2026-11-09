@@ -14,9 +14,70 @@ document.addEventListener('DOMContentLoaded', () => {
     handleScroll();
   }
 
+  /* ── Contact form AJAX submission and feedback ──────────── */
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    let feedback = document.getElementById('formSuccessMsg');
+    if (!feedback) {
+      feedback = document.createElement('p');
+      feedback.id = 'formSuccessMsg';
+      feedback.className = 'form-success';
+      feedback.setAttribute('role', 'status');
+      feedback.setAttribute('aria-live', 'polite');
+      feedback.hidden = true;
+      contactForm.appendChild(feedback);
+    }
+
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton ? submitButton.innerHTML : '';
+
+    contactForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      feedback.hidden = true;
+
+      if (!contactForm.reportValidity()) return;
+
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+      }
+
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/viscrypta.tech@gmail.com', {
+          method: 'POST',
+          body: new FormData(contactForm),
+          headers: { Accept: 'application/json' }
+        });
+
+        const result = await response.json();
+        if (!response.ok || result.success === false || result.success === 'false') {
+          throw new Error(result.message || 'The form could not be submitted.');
+        }
+
+        contactForm.reset();
+        feedback.textContent = 'Thank You For Submission, We will respond soon to you.';
+        feedback.classList.remove('form-error');
+        feedback.hidden = false;
+        window.setTimeout(() => {
+          feedback.hidden = true;
+        }, 1800);
+      } catch (error) {
+        console.error('Contact form submission failed:', error);
+        feedback.textContent = 'Sorry, your message could not be sent. Please try again or email us directly.';
+        feedback.classList.add('form-error');
+        feedback.hidden = false;
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.innerHTML = originalButtonText;
+        }
+      }
+    });
+  }
+
   /* ── Scroll reveal ─────────────────────────────────────── */
   const revealTargets = document.querySelectorAll(
-    '.section-heading, .application-card, .feature-card, .price-card, .team-card, .story-aside, .story-copy, .about-content-panel, .architecture, .contact-form, .contact-aside, .cta-band, .portfolio-card, .deployment-card, .roadmap-row, .engagement-note'
+    '.section-heading, .application-card, .feature-card, .price-card, .team-card, .story-aside, .story-copy, .about-content-panel, .architecture, .contact-form, .contact-aside, .cta-band, .portfolio-card'
   );
   if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const revealObserver = new IntersectionObserver((entries, currentObserver) => {
